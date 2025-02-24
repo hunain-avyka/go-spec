@@ -1,0 +1,39 @@
+title: Pipeline
+description: Pipeline defines the pipeline execution.
+type: object
+
+properties:
+  stages:
+    type: array
+    description: Stages defines a list of pipeline stages.
+    items:
+      $ref: ./stage.yaml
+
+  inputs:
+    type: object
+    description: Inputs defines the pipeline input parameters.
+    additionalProperties: 
+      $ref: ./input.yaml
+
+  options:
+    $ref: ./default.yaml
+    description: Options defines global configuration options.
+
+required:
+  - stages
+
+# example pipelines
+examples:
+  # example CI pipeline
+  - version: 1
+    stages:
+      - name: build
+        type: ci
+        spec:
+          steps:
+            - name: compile
+              type: script
+              spec:
+                run: |-
+                  go build
+                  go test

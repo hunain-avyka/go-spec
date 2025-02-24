@@ -1,0 +1,42 @@
+title: Input
+type: object
+description: Input defines an input parameter.
+properties:
+  type:
+    description: Type defines the input type.
+    type: string
+    enum:
+    - string
+    - number
+    - boolean
+    - array
+    - map
+  description:
+    type: string
+    description: Desc defines the input description.
+  default:
+    type:
+    - string
+    - number
+    - boolean
+    - array
+    - object
+    x-go-type: interface{}
+  required:
+    type: boolean
+    description: Required indicates the input is required.
+  items:
+    $ref: ./input_items.yaml
+    description: Items defines an arrat type.
+  enum:
+    type: array
+    items:
+      type:
+      - string
+      - number
+      - boolean
+    description: Enum defines a list of accepted input values.
+    x-go-type: "[]string"
+  mask:
+    type: boolean
+    description: Mask indicates the input should be masked.

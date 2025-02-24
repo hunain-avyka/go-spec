@@ -1,0 +1,11 @@
+title: VolumeHost
+type: object
+properties:
+  path:
+    type: string
+
+required:
+- path
+
+
+x-docs-title: volume.type.host

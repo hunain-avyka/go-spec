@@ -1,0 +1,8 @@
+title: StepBarrier
+type: object
+
+properties:
+  ref:
+    type: string
+
+x-docs-skip: true

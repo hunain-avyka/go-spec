@@ -1,0 +1,15 @@
+title: StatusStage
+type: object
+
+properties:
+  disabled:
+    type: boolean
+  matrix:
+    type: string
+    enum:
+    - itemize
+    - summarize
+  name:
+    type: string
+
+x-docs-skip: true

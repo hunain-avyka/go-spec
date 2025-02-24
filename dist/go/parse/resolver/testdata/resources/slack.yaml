@@ -1,0 +1,14 @@
+kind: plugin
+type: step
+name: slack
+spec:
+  inputs:
+    channel:
+      type: string
+    status:
+      type: string
+  step:
+    type: script
+    spec:
+      image: plugins/slack
+

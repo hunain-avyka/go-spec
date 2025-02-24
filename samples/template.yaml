@@ -1,0 +1,16 @@
+kind: template
+type: stage
+spec:
+  inputs:
+    username:
+      type: string
+    password:
+      type: string
+
+  type: ci
+  spec:
+    steps:
+    - name: build
+      type: script
+      spec:
+        run: go build

@@ -1,0 +1,72 @@
+title: StepBackground
+type: object
+
+properties:
+  shell:
+    type: string
+    enum:
+    - sh
+    - bash
+    - powershell
+    - pwsh
+  envs:
+    type: object
+    additionalProperties:
+      type: string
+    description: The step environment variables.
+  run:
+    type: string
+    x-deprecate: true
+  script:
+    anyOf:
+    - items:
+        type: string
+      type: array
+    - type: string
+  container:
+    $ref: ./container.yaml
+  mount:
+    type: array
+    items:
+      $ref: ./mount.yaml
+
+  image:
+    type: string
+    x-deprecate: true
+  user:
+    type: string
+    x-deprecate: true
+  pull:
+    type: string
+    enum:
+    - always
+    - never
+    - if-not-exists
+    x-deprecate: true
+  entrypoint:
+    type: string
+    x-deprecate: true
+  args:
+    type: array
+    items:
+      type: string
+    x-deprecate: true
+  ports:
+    type: array
+    items:
+      type: string
+    x-deprecate: true
+  network:
+    type: string
+    x-deprecate: true
+  privileged:
+    type: boolean
+    x-deprecate: true
+  resources:
+    $ref: ./resources.yaml
+    x-deprecate: true
+  workdir:
+    type: string
+    x-deprecate: true
+
+

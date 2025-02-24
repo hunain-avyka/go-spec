@@ -1,0 +1,41 @@
+title: Cache
+type: object
+description: Cache defines pipeline caching behavior.
+properties:
+  enabled:
+    description: Enabled enables cache intelligence.
+    type: boolean
+  paths:
+    description: Paths provides a list of paths to cache.
+    type: array
+    items:
+      type: string
+  key:
+    description: Key provides a caching key.
+    type: string
+  policy:
+    type: string
+    description: |
+      Policy configures the pull and push behavior of the cache.
+      By default, the stage pulls the cache when the stage starts
+      and pushes changes to the cache when the stage ends.
+    default: pull-push
+    enum:
+    - pull
+    - pull-push
+    - push
+
+examples:
+- cache:
+    enabled: true
+- cache:
+    enabled: true
+    paths:
+    - node_modules
+- cache:
+    enabled: true
+    paths:
+    - node_modules
+    policy: pull
+
+x-docs-skip: true

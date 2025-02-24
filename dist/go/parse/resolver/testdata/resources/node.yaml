@@ -1,0 +1,21 @@
+kind: template
+type: stage
+name: node
+spec:
+  inputs:
+    package_manager:
+      type: string
+      default: npm
+      enum:
+      - yarn
+      - npm
+  stage:
+    type: ci
+    spec:
+      steps:
+      - type: script
+        spec:
+          image: node
+          run: |-
+            npm install
+            npm run test

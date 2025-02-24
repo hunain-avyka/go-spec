@@ -1,0 +1,12 @@
+type: object
+title: StepTemplate
+
+properties:
+  name:
+    type: string
+    description: Template name.
+  inputs:
+    type: object
+    x-go-type: "map[string]interface{}"
+  overlays:
+    type: object

@@ -1,0 +1,10 @@
+title: VolumeClaim
+type: object
+properties:
+  name:
+    type: string
+
+required:
+- name
+
+x-docs-title: volume.type.claim

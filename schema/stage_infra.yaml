@@ -1,0 +1,34 @@
+properties:
+  stack:
+    description: Configures the stack id to be used in the pipeline execution.
+    type: string
+  workflow:
+    description: Configures the workflow to be used in the pipeline execution.
+    type: string
+    enum:
+      - provision
+      - teardown
+  clone:
+    $ref: ./clone.yaml
+    description: Configures the default clone behavior.
+  platform:
+    $ref: ./platform.yaml
+    description: Configures the target execution platform.
+  runtime:
+    $ref: ./runtime.yaml
+    description: Configures the target runtime engine.
+  steps:
+    description: Configures a series of steps to executes.
+    items:
+      $ref: ./step.yaml
+    type: array
+  envs:
+    type: object
+    additionalProperties:
+      type: string
+    description: The stage environment variables.
+type: object
+title: StageInfra
+
+x-docs-skip: true
+x-docs-title: stage.type.infra
