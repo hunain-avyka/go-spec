@@ -17,8 +17,8 @@ package expand
 import (
 	"encoding/json"
 
-	schema "github.com/drone/spec/dist/go"
-	"github.com/drone/spec/dist/go/parse/expand/matrix"
+	schema "github.com/hunain-avyka/go-spec/dist/go"
+	"github.com/hunain-avyka/go-spec/dist/go/parse/expand/matrix"
 )
 
 // Expand expands the matrix strategies.

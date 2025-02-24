@@ -17,7 +17,7 @@ package resolver
 import (
 	"errors"
 
-	schema "github.com/drone/spec/dist/go"
+	schema "github.com/hunain-avyka/go-spec/dist/go"
 )
 
 // Lookup returns a resource by name, kind and type.

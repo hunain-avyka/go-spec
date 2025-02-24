@@ -19,8 +19,8 @@ package expand
 // 	"os"
 // 	"testing"
 
-// 	"github.com/drone/spec/dist/go/parse"
-// 	"github.com/drone/spec/dist/go/parse/normalize"
+// 	"github.com/hunain-avyka/go-spec/dist/go/parse"
+// 	"github.com/hunain-avyka/go-spec/dist/go/parse/normalize"
 // )
 
 // func TestExpand(t *testing.T) {

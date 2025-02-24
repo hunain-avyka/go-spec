@@ -15,7 +15,7 @@
 package normalize
 
 import (
-	schema "github.com/drone/spec/dist/go"
+	schema "github.com/hunain-avyka/go-spec/dist/go"
 )
 
 // Normalize normalizes the yaml to ensure all stages and

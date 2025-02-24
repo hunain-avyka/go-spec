@@ -18,8 +18,8 @@ import (
 	"path/filepath"
 	"testing"
 
-	schema "github.com/drone/spec/dist/go"
-	"github.com/drone/spec/dist/go/parse"
+	schema "github.com/hunain-avyka/go-spec/dist/go"
+	"github.com/hunain-avyka/go-spec/dist/go/parse"
 
 	"github.com/google/go-cmp/cmp"
 )

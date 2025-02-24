@@ -23,7 +23,7 @@ import (
 
 	"github.com/ghodss/yaml"
 
-	schema "github.com/drone/spec/dist/go"
+	schema "github.com/hunain-avyka/go-spec/dist/go"
 )
 
 // Parse parses the configuration from io.Reader r.

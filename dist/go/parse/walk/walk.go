@@ -17,7 +17,7 @@ package walk
 import (
 	"errors"
 
-	schema "github.com/drone/spec/dist/go"
+	schema "github.com/hunain-avyka/go-spec/dist/go"
 )
 
 // Func is the type of the function called for
