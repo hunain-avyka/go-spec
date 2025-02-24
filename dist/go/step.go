@@ -91,6 +91,8 @@ func (v *Step) UnmarshalJSON(data []byte) error {
 		v.Spec = new(StepTemplate)
 	case "jenkins":
 		v.Spec = new(StepJenkins)
+	case "Run_test":
+		v.Spec = new(Buildspec)
 	default:
 		return fmt.Errorf("unknown type %s", v.Type)
 	}
